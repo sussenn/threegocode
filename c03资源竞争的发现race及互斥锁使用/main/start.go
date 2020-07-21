@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 //计算1-200的各个数的和，并且把各个数的和放入到map中
@@ -39,9 +40,9 @@ func main() {
 		go test(i)
 	}
 	//休眠10s	等待协程执行完毕
-	//time.Sleep(time.Second * 10)
+	time.Sleep(time.Second * 10)
 
-	//这里加锁是因为即便程序声明等待10s,而底层代码不会理解,仍然发生资源竞争
+	//这里加锁是因为即便程序声明等待10s,协程写map已然结束,而底层代码不会理解,读map仍然发生资源竞争
 	lock.Lock() //加锁
 	//输出myMap
 	for i, v := range myMap {
