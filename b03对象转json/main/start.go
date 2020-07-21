@@ -23,7 +23,7 @@ func testStruct() {
 		Sal:      8000.0,
 		Skill:    "万剑归宗",
 	}
-	//序列化
+	//序列化		返回的data是 []byte
 	data, err := json.Marshal(&monster)
 	if err != nil {
 		fmt.Println("序列化错误:", err)

@@ -13,7 +13,7 @@ type People struct {
 }
 
 func (this *People) Store() bool {
-	//将对象转json
+	//将对象转json	返回的data是 []byte
 	data, err := json.Marshal(this)
 	if err != nil {
 		fmt.Println("json转换异常:", err)

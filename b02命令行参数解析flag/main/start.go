@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	//输入命令行 命令
-	//test.exe -u root -pwd root -h 127.0.0.1 -port 3306
+	//输入命令行命令: go build -o test.exe start.go 生成test.exe
+	//再执行程序test.exe: test.exe -u root -pwd root -h 127.0.0.1 -port 3306
 	//用于接收命令行参数值
 	var user string
 	var pwd string

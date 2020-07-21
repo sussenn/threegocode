@@ -16,6 +16,7 @@ func TestPeople_Store(t *testing.T) {
 }
 
 func TestPeople_ReStore(t *testing.T) {
+	//创建对象,用于接收json转换后的结果
 	var people = &People{}
 	res := people.ReStore()
 	if !res {
